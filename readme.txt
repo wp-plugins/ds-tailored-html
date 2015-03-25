@@ -1,7 +1,7 @@
-=== Data Springs Tailored HTML 1.0 ===
+=== Data Springs Tailored HTML 1.04 ===
 
 Contributors: rbakerink
-Donate link: https://www.datasprings.com/wordpress/tailored-html
+Donate link: https://www.datasprings.com/wordpress/plugins/tailored-html
 Tags: Data Springs, WordPress, Tailored, HTML, Text, Dynamic, SQL, Authorized, Unauthorized, Authenticated, Unauthenticated, User, Template, Responsive, Design, jQuery
 Requires at least: 4.1
 Tested up to: 4.1
@@ -25,7 +25,7 @@ If Tailored HTML was downloaded through WordPress:
 
 
 
-If Tailored HTML was downloaded from www.datasprings.com/wordpress/tailored-html:
+If Tailored HTML was downloaded from https://www.datasprings.com/wordpress/plugins/tailored-html:
 
 1. Extract the ds-tailored-htmle.zip and copy/paste the plugin folder directly into 'wp-content/plugins' folder. 
 2. Visit your WordPress site through the dashboard and go to the Plugin menu. Activate Tailored HTML from there and you're ready to begin using it.
@@ -60,7 +60,7 @@ Tailored HTML is not our only WordPress plugin under development. By receiving d
 
 == Screenshots ==
 
-Visit our website at https://www.datasprings.com/wordpress/tailored-html and download our Tailored HTML User Guide.
+Visit our website at https://www.datasprings.com/wordpress/plugins/tailored-html and download our Tailored HTML User Guide.
 
 == Changelog ==
 
