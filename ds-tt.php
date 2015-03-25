@@ -3,7 +3,7 @@
  * Plugin Name: Data Springs Tailored HTML
  * Plugin URI: https://www.datasprings.com/wordpress/tailored-html
  * Description: Provide different templates based on if the user is authenticated or unauthenticated.
- * Version: 1.0
+ * Version: 1.03
  * Author: Ryan Bakerink
  * Author URI: https://www.datasprings.com/wordpress/tailored-html
  * License: GPL2
