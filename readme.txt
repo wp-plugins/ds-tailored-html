@@ -1,4 +1,4 @@
-=== Data Springs Tailored HTML 1.04 ===
+=== Data Springs Tailored HTML 1.0 ===
 
 Contributors: rbakerink
 Donate link: https://www.datasprings.com/wordpress/plugins/tailored-html
