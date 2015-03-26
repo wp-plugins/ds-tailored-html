@@ -32,24 +32,30 @@ jQuery( document ).ready(function() {
 
 //OnChange event for Template Configuration Combo Box
 jQuery('#ds_tt_instance').change(function(){
-
 	jQuery.blockUI();
 	ds_tt_hide_error_success_messages();
-	ds_tt_get_template_configuration_details(jQuery('#ds_tt_instance').val());
+
 
 	if(jQuery('#ds_tt_instance').val() == '-1') {
 		ds_tt_clear_template_form();
 		jQuery('.hide_show_template_row').hide();
-		ds_tt_get_template_configuration_details(jQuery('#ds_tt_instance').val());
+		ds_tt_get_template_details(jQuery('#ds_tt_instance').val());
 	}
 	else { 
 		if(jQuery('#ds_tt_instance').val() == '0') {
 			ds_tt_clear_template_form();
+			jQuery.unblockUI();
+		}
+		else{
+			ds_tt_get_template_details(jQuery('#ds_tt_instance').val());	
 		}
 		
 		jQuery('.hide_show_template_row').show();
 	}
+
 });
+
+
 
 //OnChange event for Stylesheet Configuration Combo Box
 jQuery('#ds_tt_stylesheet_instance').change(function(){
@@ -172,6 +178,7 @@ function ds_tt_clear_template_form() {
 	
 	document.getElementById('ds_tt_configuration_submit').value = 'Save Configuration';
 	jQuery('#ds_tt_configuration_delete').hide();
+	
 }
 
 
@@ -189,9 +196,11 @@ function ds_tt_failure_message() {
 
 //Hide both Success & Failed Message
 function ds_tt_hide_error_success_messages() {
+	
 	jQuery('#ds_success_message').removeClass("show-template-default").addClass("hide-template-default");
 	jQuery('#ds_error_message').removeClass("show-template-default").addClass("hide-template-default");
 	jQuery('.hide-template-default').hide();
+	
 }
 
 
@@ -218,15 +227,15 @@ function ds_tt_remove_quotes_validation( input_value, input_id ) {
 
 
 //AJAX to get configuration settings by instance_id selected
-function ds_tt_get_template_configuration_details(instance_id) {
+function ds_tt_get_template_details(main_id) {
 
 	 jQuery.ajax({
 			 type : "post",
 			 dataType : "json",
 			 url : tt_ajax.ajaxurl, 
-			 data : {action: "tt_get_template_configuration",  cid : instance_id},
-			 success: function(response) {		
-		 
+			 data : {action: "tt_get_template",  cid : main_id},
+			 success: function(response) {
+
 					if (response['status_type'] == 'success') {
 						document.getElementById('ds_tt_instance').value = response['id'];
 						document.getElementById('ds_tt_instance_id').value = response['id'];
@@ -271,8 +280,9 @@ function ds_tt_get_template_configuration_details(instance_id) {
 					else {
 						jQuery.unblockUI();
 					}
+		
 			 }
-		  }) ;	  
+		  });	   
 }
 
 /*AJAX TO GET THE STYLESHEET RELATED TO CONFIGURATION*/

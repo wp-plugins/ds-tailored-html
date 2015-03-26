@@ -89,43 +89,63 @@ function ds_tt_replace_tokens_with_values($template, $array) {
 	return $template_value;
 }
 
+
 /*GET THE CONFIGURATION DETAILS*/
-function ds_tt_get_template_configuration() {
+function ds_tt_get_template() {
 
-   $instance_id = sanitize_text_field($_REQUEST['cid']);
-
-   if( $instance_id != '-1' AND $instance_id != '0') {
+   $main_id = sanitize_text_field($_REQUEST['cid']);
+	$e = '';
+	$token_list = '';
+	
+   if( $main_id != '-1' AND $main_id != '0') {
 		global $wpdb;
 		
-		$sql = "SELECT id , instance_name, authorized_template, unauthorized_template, authorized_editor, unauthorized_editor, token_sql, '' As token_sql_columns, 'success' As status_type FROM `wp_ds_tailored_html` where id= ".$instance_id." ORDER BY instance_name ASC";
+		$sql = "SELECT id , instance_name, authorized_template, unauthorized_template, authorized_editor, unauthorized_editor, token_sql, '' As token_sql_columns, 'success' As status_type FROM `wp_ds_tailored_html` where id= ".$main_id." ORDER BY instance_name ASC";
 		
 		$results = $wpdb->get_results( $sql , ARRAY_A);
 		
 		foreach($results as $result) {
 			$id = $result['id'];
 			$instance_name = $result['instance_name'];
-			$authorized_template = $result['authorized_template'];
-			$unauthorized_template = $result['unauthorized_template'];
+			/*$authorized_template = $result['authorized_template'];
+			$unauthorized_template = $result['unauthorized_template'];*/
 			$authorized_editor = $result['authorized_editor'];	
 			$unauthorized_editor = $result['unauthorized_editor'];	
 			$token_sql = $result['token_sql'];	
 			$status_type = $result['status_type'];
 			
 			$sql_for_tokens = $token_sql;
-			$token_results = $wpdb->get_results( $sql_for_tokens , ARRAY_A);
 			
-			$token_list = '';
-			foreach($token_results as $token) {
-				foreach($token as $name => $value) {
-					
-					if ( !preg_match('['.strtolower($name).']',$token_list)) {
-						$token_list .= '['.strtolower($name).']&nbsp;&nbsp;&nbsp;';	
+			
+			try {
+					if( $sql_for_tokens == ''){
+						$token_list = '';
 					}
+					else {
+						$token_results = $wpdb->get_results( $sql_for_tokens , ARRAY_A);
+						
+						$token_list = '';
+						foreach($token_results as $token) {
+							foreach($token as $name => $value) {
+								
+								if ( !preg_match('['.strtolower($name).']',$token_list)) {
+									$token_list .= '['.strtolower($name).']&nbsp;&nbsp;&nbsp;';	
+								}
 
-					
-				}
-				
+								
+							}
+							
+						}
+					}
+			} 
+			catch (Exception $e) {
+				$token_list = '';
 			}
+
+			
+			
+			
+
 			
 			$result['token_sql_columns'] = $token_list;
 
@@ -140,7 +160,6 @@ function ds_tt_get_template_configuration() {
 		$result_failed['status_type'] = 'failed';
 		echo json_encode($result_failed);
 	}
-   die();
 }
 
 function ds_tt_get_stylesheet() {

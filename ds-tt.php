@@ -25,10 +25,11 @@ add_action('init', 'ds_tt_generate_short_codes');
 add_action('widgets_init', 'ds_tt_instance_init');
 
 
-add_action("wp_ajax_tt_get_template_configuration", "ds_tt_get_template_configuration");
+
 add_action("wp_ajax_tt_get_stylesheet", "ds_tt_get_stylesheet");
 add_action("wp_ajax_tt_get_preview", "ds_tt_get_preview");
 add_action("wp_ajax_tt_update_stylesheet", "ds_tt_update_stylesheet");
+add_action("wp_ajax_tt_get_template", "ds_tt_get_template");
 
 /*REGISTER JAVASCRIPT & CSS*/
 function ds_tt_load_scripts() {
