@@ -67,10 +67,12 @@ Tailored HTML is not our only WordPress plugin under development. By receiving d
 
 
 == Screenshots ==
-<img class="screenshot" src="http://plugins.svn.wordpress.org/ds-tailored-html/assets/configuration.png" alt="Tailored HTML Configuration Panel" />
-/assets/configuration.png
-/assets/configuration.png
-This screen shot description corresponds to configuration.png
+
+1. Tailored HTML Main Configuration 
+2. Authenticated Template
+3. Unauthenticated Template
+4. Dynamic Tokens / SQL 
+5. Short Codes
 
 == Changelog ==
 
