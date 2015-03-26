@@ -1,8 +1,8 @@
-=== Data Springs Tailored HTML ===
+=== Tailored HTML ===
 
 Contributors: rbakerink
 Donate link: https://www.datasprings.com/wordpress/plugins/tailored-html#86673-donate
-Tags: Data Springs, WordPress, Tailored, HTML, Text, Dynamic, SQL, Authorized, Unauthorized, Authenticated, Unauthenticated, User, Template, Responsive, Design, jQuery
+Tags: Data Springs, WordPress, Tailored, Tailor, Tail, HTML, Text, Dynamic, SQL, Authorized, Unauthorized, Authenticated, Unauthenticated, User, Template, Responsive, Design, jQuery
 Requires at least: 4.1
 Tested up to: 4.1
 Stable tag: 4.1
@@ -82,8 +82,8 @@ Tailored HTML has just been released. There have been no patches/hot fixes appli
 
 == Arbitrary section ==
 
-Visit our website at https://www.datasprings.com/wordpress/tailored-html and download our Tailored HTML User Guide.
+Visit our website at https://www.datasprings.com/wordpress/plugins/tailored-html and download our Tailored HTML User Guide.
 
 == Upgrade Notice ==
 
-There are no upgrade notices at this time as this version of Data Springs Tailored HTML has just been initially released.
+There are no upgrade notices at this time as this version of Tailored HTML has just been initially released.
