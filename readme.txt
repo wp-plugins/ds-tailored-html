@@ -67,12 +67,10 @@ Tailored HTML is not our only WordPress plugin under development. By receiving d
 
 
 == Screenshots ==
-
-<img src="/assets/configuration.png" alt="Tailored HTML Configuration Panel" title="Tailored HTML Configuration Panel" /><br />
-#1 /assets/configuration.png<br />
-# 2 /assets/configuration.png<br />
-This screen shot description corresponds to configuration.png<br />
-<span style="font-size:9pt;">Tailored HTML Configuration Panel</span>
+<img class="screenshot" src="http://plugins.svn.wordpress.org/ds-tailored-html/assets/configuration.png" alt="Tailored HTML Configuration Panel" />
+/assets/configuration.png
+/assets/configuration.png
+This screen shot description corresponds to configuration.png
 
 == Changelog ==
 
