@@ -4,8 +4,8 @@ Contributors: rbakerink
 Donate link: https://www.datasprings.com/wordpress/plugins/tailored-html#86673-donate
 Tags: Data Springs, WordPress, Tailored, Tailor, Tail, HTML, Text, Dynamic, SQL, Authorized, Unauthorized, Authenticated, Unauthenticated, User, Template, Responsive, Design, jQuery
 Requires at least: 4.1
-Tested up to: 4.1
-Stable tag: 4.1
+Tested up to: 4.2.1
+Stable tag: 4.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
